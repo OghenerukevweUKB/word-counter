@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word counter</title>
+</head>
+<body>
+    <h1>word counter</h1>
+    <form method="POST" >
+        {%csrf_token%}
+    
+        <label for="text">Your word</label>
+        <br>
+        <br>
+        
+        <textarea name="text" id="text" cols="30" rows="5" placeholder="enter your text"></textarea>
+        <br>
+        <br>
+        
+        <button type="submit">count</button>
+        
+    </form>
+    
+    <h3>Total words {{ result }}</h3>
+</body>
+</html>
